@@ -1,0 +1,14 @@
+{% extends 'emsapp/base.html' %}
+
+{% block title %}Add Employee – EMS{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Add Employee</h2>
+<form method="post" class="row g-3" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="col-12">
+        <button type="submit" class="btn btn-success">Add Employee</button>
+    </div>
+</form>
+{% endblock %}

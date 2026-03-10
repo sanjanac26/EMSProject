@@ -1,0 +1,33 @@
+{% extends 'emsapp/base.html' %}
+
+{% block title %}Dashboard – EMS{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Dashboard</h1><br>
+<div class="row g-4">
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Total Employees</h5>
+        <p class="display-6 text-success">{{ total_employees }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Add Employee</h5>
+        <a href="{% url 'insert' %}" class="btn btn-success">Add</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">View Employees</h5>
+        <a href="{% url 'display' %}" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
